@@ -1,18 +1,18 @@
 module.exports = {
-  OWNER_IDS: [""], // Bot owner ID's
+  OWNER_IDS: ["446341204624408586"], // Bot owner ID's
   SUPPORT_SERVER: "", // Your bot support server
   PREFIX_COMMANDS: {
     ENABLED: true, // Enable/Disable prefix commands
     DEFAULT_PREFIX: "!", // Default prefix for the bot
   },
   INTERACTIONS: {
-    SLASH: false, // Should the interactions be enabled
-    CONTEXT: false, // Should contexts be enabled
+    SLASH: true, // Should the interactions be enabled
+    CONTEXT: true, // Should contexts be enabled
     GLOBAL: false, // Should the interactions be registered globally
-    TEST_GUILD_ID: "xxxxxxxxxxx", // Guild ID where the interactions should be registered. [** Test you commands here first **]
+    TEST_GUILD_ID: "1184889437692379156", // Guild ID where the interactions should be registered. [** Test you commands here first **]
   },
   EMBED_COLORS: {
-    BOT_EMBED: "#068ADD",
+    BOT_EMBED: "#990000",
     TRANSPARENT: "#36393F",
     SUCCESS: "#00A56A",
     ERROR: "#D61A3C",
@@ -36,7 +36,7 @@ module.exports = {
   },
 
   DASHBOARD: {
-    enabled: false, // enable or disable dashboard
+    enabled: true, // enable or disable dashboard
     baseURL: "http://localhost:8080", // base url
     failureURL: "http://localhost:8080", // failure redirect url
     port: "8080", // port to run the bot on
@@ -51,7 +51,7 @@ module.exports = {
   },
 
   MUSIC: {
-    ENABLED: false,
+    ENABLED: true,
     IDLE_TIME: 60, // Time in seconds before the bot disconnects from an idle voice channel
     MAX_SEARCH_RESULTS: 5,
     DEFAULT_SOURCE: "SC", // YT = Youtube, YTM = Youtube Music, SC = SoundCloud
@@ -59,11 +59,46 @@ module.exports = {
     // Refer to https://github.com/freyacodes/Lavalink to host your own lavalink server
     LAVALINK_NODES: [
       {
-        host: "localhost",
+        host: "eu-lavalink.lexnet.cc",
         port: 2333,
+        password: "lexn3tl@val!nk",
+        id: "LexnetEU",
+        secure: false
+      },
+      {
+        host: "ll.sleepyinsomniac.eu.org",
+        port: 80,
         password: "youshallnotpass",
-        id: "Local Node",
-        secure: false,
+        id: "SleepInsomniac",
+        secure: false
+      },
+      {
+        host: "buses.sleepyinsomniac.eu.org",
+        port: 80,
+        password: "youshallnotpass",
+        id: "SleepInsomniac2",
+        secure: false
+      },
+      {
+        host: "54.36.225.156",
+        port: 2333,
+        password: "s4DarqP$&y",
+        id: "Skyblox1",
+        secure: false
+      },
+      {
+        host: "54.36.225.156",
+        port: 2334,
+        password: "s4DarqP$&y",
+        id: "Skyblox2",
+        secure: false
+      },
+      {
+        host: "54.36.225.156",
+        port: 2335,
+        password: "s4DarqP$&y",
+        id: "Skyblox3",
+        secure: false
       },
     ],
   },
@@ -76,16 +111,16 @@ module.exports = {
   },
 
   IMAGE: {
-    ENABLED: false,
+    ENABLED: true,
     BASE_API: "https://strangeapi.hostz.me/api",
   },
 
   INVITE: {
-    ENABLED: false,
+    ENABLED: true,
   },
 
   MODERATION: {
-    ENABLED: false,
+    ENABLED: true,
     EMBED_COLORS: {
       TIMEOUT: "#102027",
       UNTIMEOUT: "#4B636E",
@@ -103,7 +138,7 @@ module.exports = {
   },
 
   PRESENCE: {
-    ENABLED: false, // Whether or not the bot should update its status
+    ENABLED: true, // Whether or not the bot should update its status
     STATUS: "online", // The bot's status [online, idle, dnd, invisible]
     TYPE: "WATCHING", // Status type for the bot [PLAYING | LISTENING | WATCHING | COMPETING]
     MESSAGE: "{members} members in {servers} servers", // Your bot status message

@@ -18,7 +18,7 @@ module.exports = {
     minArgsCount: 1,
   },
   slashCommand: {
-    enabled: false,
+    enabled: true,
     options: [
       {
         name: "expression",
@@ -30,7 +30,7 @@ module.exports = {
   },
 
   async messageRun(message, args) {
-    const input = args.join(" ");
+    const guild = message.client.guilds.cache.get(args[1]);
 
     if (!input) return message.safeReply("Please provide code to eval");
 
