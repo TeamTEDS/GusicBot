@@ -10,6 +10,8 @@ const { checkForUpdates } = require("@helpers/BotUtils");
 const { initializeMongoose } = require("@src/database/mongoose");
 const { BotClient } = require("@src/structures");
 const { validateConfiguration } = require("@helpers/Validator");
+const Cluster = require("discord-hybrid-sharding");
+const { Shard } = require('discord-cross-hosting');
 
 validateConfiguration();
 
@@ -43,5 +45,7 @@ process.on("unhandledRejection", (err) => client.logger.error(`Unhandled excepti
   }
 
   // start the client
+  client.cluster = new Cluster.ClusterClient(client);
+  client.machine = new Shard(client.cluster);
   await client.login(process.env.BOT_TOKEN);
 })();
