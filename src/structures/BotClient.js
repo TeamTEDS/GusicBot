@@ -16,13 +16,10 @@ const CommandCategory = require("./CommandCategory");
 const lavaclient = require("../handlers/lavaclient");
 const giveawaysHandler = require("../handlers/giveaway");
 const { DiscordTogether } = require("discord-together");
-const { getInfo } = require("discord-hybrid-sharding");
 
 module.exports = class BotClient extends Client {
   constructor() {
     super({
-      shards: getInfo().SHARD_LIST, // An array of shards that will get spawned
-      shardCount: getInfo().TOTAL_SHARDS, // Total number of shards
       intents: [
         GatewayIntentBits.Guilds,
         GatewayIntentBits.GuildMessages,
